@@ -55,17 +55,16 @@ submitUser.addEventListener('click', () => {
     const firstName = firstNameInput.value;
     const lastName = lastNameInput.value;
     const age = ageInput.value;
-    const line = document.createElement('tr');
-    table.append(line);
-    const newFirstName = document.createElement('td');
-    newFirstName.innerHTML = `${firstName}`;
-    table.append(newFirstName);
-
-    const newLastName = document.createElement('td');
-    newLastName.innerHTML = `${lastName}`;
-    table.append(newLastName);
-
-    const newAge = document.createElement('td');
-    newAge.innerHTML = `${age}`;
-    table.append(newAge);
+    const row = table.insertRow(-1);
+    const firstNameUser = row.insertCell(0);
+    const lastNameUser = row.insertCell(1);
+    const ageUser = row.insertCell(2);
+    firstNameUser.innerHTML = firstName;
+    lastNameUser.innerHTML = lastName;
+    ageUser.innerHTML = age;
+    firstNameInput.value = '';
+    lastNameInput.value ='';
+    ageInput.value ='';
 });
+
+
