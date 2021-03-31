@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="info_users">
+        <table id="myTable">
+            <tr>
+                <td class="header">First Name</td>
+                <td class="header">Last Name</td>
+                <td class="header">Age</td>
+            </tr>
+        </table>
+    </div>
+    <button id="AddUser" class="add_user">Add user</button>
+    <form action="#" method="get" name="info" class="info">
+        <div class="header_window">
+            <legend class="title_window" >Modal Window</legend>
+            <button id="close" class="close_window" type="button">x</button>
+        </div>
+        <div>
+            <label>
+                <span>First Name</span>
+            </label>
+            <input  type="text" id="first_name" placeholder="Имя" name="first">
+        </div>
+
+        <div>
+            <label>
+                <span>Last Name</span>
+            </label>
+            <input  type="text"  id="last_name" placeholder="Фамилия" name="last">
+        </div>
+
+        <div>
+            <label>
+                <span>Age</span>
+            </label>
+
+            <input  type="number"  id="age" placeholder="Возраст" name="age">
+        </div>
+        <button id="cancelAddUserModal" class="cancel" type="button" >Cancel</button>
+        <button id="openAddUserModal" class="submit" type="button">Add user</button>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
